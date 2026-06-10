@@ -26,3 +26,4 @@ pnpm-debug.log*
 #other folders :)
 extradata.md
 src\content\blog\using-mdx.mdx
+mdguide.md

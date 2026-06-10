@@ -1,21 +1,20 @@
 ---
 const today = new Date();
+import LinkedInIcon from '../assets/icons/linkedin_icon.png?url';
 import GitHubIcon from '../assets/icons/github_icon.png?url';
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+	&copy; {today.getFullYear()} Ana Tschen. All rights reserved.
 	<div class="social-links">
-		<a href="https://www.linkedin.com/in/ana-laura-tschen-moscoso-12ba59242/" target="_blank">
+		<a href="https://www.linkedin.com/in/ana-laura-tschen-moscoso-12ba59242/" target="_blank" rel="noreferrer noopener">
 			<span class="sr-only">Follow Me on LinkedIn</span>
-			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
-				<path fill="currentColor" d="M2.053 2.003C1.506 2.003 1.068 2.44 1.068 2.988v10.023c0 .548.438.985.985.985h10.014c.548 0 .986-.437.986-.985V2.988c0-.548-.438-.985-.986-.985H2.053Zm3.36 2.533c.85 0 1.372-.599 1.372-1.31 0-.706-.525-1.31-1.39-1.31-.866 0-1.372.604-1.372 1.31 0 .711.506 1.31 1.39 1.31Zm.173 1.667H3.33V12h2.256V6.203Zm4.211 0H7.25V12h2.256V8.92c0-1.502.958-1.742 1.436-1.742.477 0 1.095.168 1.095 1.52V12H13V8.607c0-2.234-1.192-2.27-1.759-2.27-.484 0-.716.264-.84.45v.014h-.005Z"/>
-			</svg>
+			<img src={LinkedInIcon} alt="LinkedIn" width="32" height="32" />
 		</a>
 		<a href="https://github.com/withastro/astro" target="_blank" rel="noreferrer noopener">
-				<span class="sr-only">Follow Me on GitHub</span>
-				<img src={GitHubIcon} alt="GitHub" width="32" height="32" />
-			</a>
+			<span class="sr-only">Follow Me on GitHub</span>
+			<img src={GitHubIcon} alt="GitHub" width="32" height="32" />
+		</a>
 	</div>
 </footer>
 <style>
@@ -37,5 +36,11 @@ import GitHubIcon from '../assets/icons/github_icon.png?url';
 	}
 	.social-links a:hover {
 		color: var(--accent);
+	}
+	.social-links img {
+		width: 32px;
+		height: 32px;
+		display: block;
+		object-fit: contain;
 	}
 </style>

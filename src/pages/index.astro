@@ -4,7 +4,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import {SITE_TITLE } from '../consts';
+import RightArrowIcon from '../assets/icons/right_arrow_icon.png?url';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -15,7 +16,7 @@ const recentPosts = posts.slice(0, 3);
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_TITLE} />
 	</head>
 	<body>
 		<Header />
@@ -55,7 +56,6 @@ const recentPosts = posts.slice(0, 3);
 			<section id="recent" class="recent-posts">
 				<div class="section-heading">
 					<h2>Recent articles</h2>
-					<a class="view-all" href="/blog">View all posts</a>
 				</div>
 				<ul>
 					{recentPosts.map((post) => (
@@ -72,6 +72,10 @@ const recentPosts = posts.slice(0, 3);
 						</li>
 					))}
 				</ul>
+				<a class="view-all" href="/blog">
+					View all posts
+					<img src={RightArrowIcon} alt="" width="18" height="18" />
+				</a>
 			</section>
 		</main>
 		<Footer />
