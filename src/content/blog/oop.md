@@ -1,7 +1,7 @@
 ---
 title: 'OOP'
 description: 'when you talk about object oriented programming (OOP for short), what are you referring to?'
-pubDate: 'Jul 22 2022'
+pubDate: 'jun 10, 2026'
 heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 

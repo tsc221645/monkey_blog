@@ -212,6 +212,15 @@ p {
 	text-decoration: none;
 }
 
+.recent-post-image {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	margin-bottom: 1rem;
+	border: 1px solid rgba(var(--border), 0.18);
+}
+
 .item-meta {
 	display: flex;
 	align-items: center;
