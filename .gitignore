@@ -27,3 +27,7 @@ pnpm-debug.log*
 extradata.md
 src\content\blog\using-mdx.mdx
 mdguide.md
+
+src\content\blog\intro-to-python-projects.md
+src\content\blog\data-strcutures-and-algorithms.md
+pending_articles
